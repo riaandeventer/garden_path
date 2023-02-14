@@ -7,16 +7,16 @@ This program takes 5 sentence and tokenise each sentence and perform entity reco
 The program uses spacy to categorise each sentence and then uses spacy.explain to identify the meaning of the entities.
 
 ## Table of Content
-1.  Implementing the website in a Django virtual environment.
+1.  Implementing the website in a virtual environment.
     - 1.1   Dependencies
     - 1.2   Copying Files
-    - 1.3   Activate and Run Program
+    - 1.3   Run Program
              
 2.  Implementing the program in a Docker environment.
     - 2.1   Creating a Docker Hub account
     - 2.2   Prepare the Docker Environment
     - 2.3   Copying Files and Pushing the Program to Docker Hub
-    - 2.4   Activate and Run Program
+    - 2.4   Run Program
   
 3.  Authors
 
@@ -73,31 +73,31 @@ after which everything you did there will be deleted.
 
 After clicking “Start” you’ll be able to create an instance.
 
-##### 2.3   Copying Files and Publishing the Site to Docker Hub
+##### 2.3   Copying Files and Pushing the Project to Docker Hub
 
 Regardless if you are now in the desktop command prompt or the docker playground instance, run the following commands:
 
 Copy the required files.
 ```
->git clone https://github.com/riaandeventer/politician-site
+>git clone https://github.com/riaandeventer/garden_path
 ```
 If you are asked for a login then it should be because you might have made a typing error with the link.
 
 First we have to go into the folder that was created from the clone.
 ```
->cd politician-site
+>cd garden_path
 ```
-Now we have to build the site with following commands:
+Now we have to build the project with following commands:
 ```
->docker build -t politician-site ./
+>docker build -t garden_path ./
 ```
 Now we need to connect the build name with the docker hub repository that we want to create.
 We will do this with the below command.
 ```
->docker tag politician-site [docker hub username without square brackets]/politician-site
+>docker tag garden_path [docker hub username without square brackets]/garden_path
 ```
 Now we need to copy our build to our docker hub. We need to use the push command from the command prompt
-or the playground prompt (Which ever one we are using).
+or the playground prompt (Which ever one you are using).
 To be able to push to docker hub, we need access to docker hub from the command line. Let's use the following commands:
 ```
 >docker login
@@ -105,14 +105,14 @@ To be able to push to docker hub, we need access to docker hub from the command 
 You will be asked for your docker hub username and password. Enter these and lookout for the login succeeded message.
 If the login was successful, let's push our build to docker hub with the following command:
 ```
->docker push [docker hub username without square brackets]/politician-site
+>docker push [docker hub username without square brackets]/garden_path
 ```
-We have now created our project on docker hub. Go to Docker Hub and confirm that there is now a politician-site repository
+We have now created our project on docker hub. Go to Docker Hub and confirm that there is now a garden_path repository
 indicating that a push took place.
 
 If you have been working with Docker Desktop, we are no done with Docker Desktop and will complete the rest with Docker Playground.
 
-##### 2.4   Activate and Run Website
+##### 2.4   Run Program
 
 Just a reminder **if you have been working with Docker Desktop**, go to [https://labs.play-with-docker.com/](https://labs.play-with-docker.com/)
 to test the site. Login with your Docker Hub account if you are not already logged in. Then click “Start”, and on the next screen
@@ -121,18 +121,12 @@ click “add new instance”.
 **If you have used Docker Playground for Copying Files and Publishing the site to Docker Hub** then you can just continue with the following commands:
 
 ```
->docker run --publish 8000:8000 [docker hub username without square brackets]/politician-site
+>docker run [docker hub username without square brackets]/garden_path
 ```
 Docker on the VM will download your image from Docker Hub and do all the relevant preparations and installation to make your app work.
 
-When the run command is done, you should see a button with the number “8000” next to “OPEN PORT” at the top of the webpage. 
-Click on it to visit that VM’s exposed port 8000. You should see your website now running completely on its own
-in the world wide web.
+The program should run in the terminal.
 
-### 3.  Sphinx Documentation
-
-For further documentation on the python modules, visit [Sphinx Documentation](./docs/_build/html/index.html).
-
-### 4.  Authors
+### 3.  Authors
 
 Riaan Deventer  - [@riaandeventer](https://twitter.com/riaandeventer)
