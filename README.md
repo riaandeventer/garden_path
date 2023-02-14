@@ -9,112 +9,44 @@ The program uses spacy to categorise each sentence and then uses spacy.explain t
 ## Table of Content
 1.  Implementing the website in a Django virtual environment.
     - 1.1   Dependencies
-    - 1.2   Installing Python3
-    - 1.3   Installing Pip
-    - 1.4   Installing Django
-    - 1.5   Copying Files
-    - 1.6   Activate and Run Website
+    - 1.2   Copying Files
+    - 1.3   Activate and Run Program
              
-2.  Implementing the website in a Docker environment.
-    - 2.1   Creating a Docker hub account
+2.  Implementing the program in a Docker environment.
+    - 2.1   Creating a Docker Hub account
     - 2.2   Prepare the Docker Environment
-    - 2.3   Copying Files and Publishing the Site to Docker Hub
-    - 2.4   Activate and Run Website
+    - 2.3   Copying Files and Pushing the Program to Docker Hub
+    - 2.4   Activate and Run Program
   
-3.  Sphinx documentation
- 
-4.  Authors
+3.  Authors
 
-### 1.  Implementing the website in a Django virtual environment.
+### 1.  Implementing the program in a virtual environment.
 
 ##### 1.1   Dependencies
 
-The Django virtual environment requires the installation of python, pip and django.
+The virtual environment requires the installation of python, pip, django and spacy.
 
-##### 1.2   Installing Python3
-
-Download the lates Python version for your system at [Python.org](https://www.python.org/downloads/) and follow the instructions for installation.  Make sure that you
-answer yes when you are asked if you want to include Python in the PATH.
-
-##### 1.3   Installing Pip and your virtual environment
-
-Open your command prompt and enter the following commands:
-
-Use the built-in pip module to install PIP.
-This is so that you can use pip normally when installing packages.
-The command for this is:
-```
->python -m pip install pip
-```
-The next thing is to install the package to enable virtual environments using:
-```
->pip install virtualenv
-```
-There is a wrapper available to enable some handy commands such as mkvirtualenv and workon.
-More about these below. 
-
-Use the below command to implement the wrapper for Linux and MacOS.
-```
->pip install virtualenvwrapper
-```
-If you have a windows machine, use the below command to implement the wrapper.
-```
->pip install virtualenvwrapper-win
-```
-Now that we have virtual environments and handy commands set up with the wrapper, 
-we can set up the virtual environment. Let’s set up a virtual environment called my_django
-using the below command.
-```
->mkvirtualenv my_django
-```
-If this command worked, then you will notice the (my_django) in the beginning of the command line.
-
-When we use the mkvirtualenv command, this creates and activates the virtual environment.
-Next time if you have closed the command prompt window, the virtual environment will still 
-exist but it will not be activated.
-
-We use the following command to activate only if the virtual environment already exist:
-```
->workon my_django
-```
-Once again remember if this command worked, then you will notice the (my_django) in the beginning of the command line.
-
-Let's now install django in the virtual environment with the following command:
-```
->pip install django
-```
-If we have installed Python correctly, the above should all work.
-
-##### 1.4   Installing Django
-
-Let's now install django in the virtual environment with the following command:
-```
->pip install django
-```
-If Python was installed correctly, the above should all work.
-
-##### 1.5   Copying Files
+##### 1.2   Copying Files
 
 Go to the directory or folder where you want to install the project and enter the following command in the command line:
 ```
->git clone https://github.com/riaandeventer/politician-site
+>git clone https://github.com/riaandeventer/garden_path
 ```
 If you are asked for a login then it should be because you might have made a typing error with the link.
 
-##### 1.6   Activate and Run Website
+##### 1.3   Run Program
 
-If your files copied successfully, there should be a folder politician-site when you enter the >dir command.
+If your files copied successfully, there should be a folder garden_path when you enter the >dir command.
 Go to this directory with below command.
 ```
->cd politician-site
+>cd garden_path
 ```
-Now we can activate the server with below command:
+Now we can run the program with below command:
 ```
->python manage.py runserver
+>python garden.py
 ```
-To see the site we need to go to our web browser and enter the following address: [http://localhost:8000](http://localhost:8000/)
 
-### 2.  Implementing the website in a Docker environment.
+### 2.  Implementing the program in a Docker environment.
 
 ##### 2.1   Creating a Docker Hub Account
 
