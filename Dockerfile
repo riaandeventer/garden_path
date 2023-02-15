@@ -2,7 +2,7 @@ FROM pypy:latest
 WORKDIR /app
 
 # Upgrade pip3
-RUN pip3 install --upgrade pip3
+RUN pip3 install --upgrade pip
 
 # install setuptools
 RUN pip3 install --upgrade setuptools
