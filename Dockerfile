@@ -1,6 +1,9 @@
 FROM pypy:latest
 WORKDIR /app
 
+# Install spacy
+RUN pip3 install -U spacy
+
 # Install spacy model sm
 RUN pip3 install https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.5.0/en_core_web_sm-3.5.0.tar.gz --user
 
