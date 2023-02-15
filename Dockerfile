@@ -1,6 +1,12 @@
 FROM pypy:latest
 WORKDIR /app
 
+# Upgrade pip3
+RUN pip3 install --upgrade pip3
+
+# install setuptools
+RUN pip3 install --upgrade setuptools
+
 # Install spacy
 RUN pip3 install spacy==3.4.0
 
