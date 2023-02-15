@@ -2,7 +2,7 @@ FROM pypy:latest
 WORKDIR /app
 
 # Install spacy
-RUN pip3 install spacy==3.4.0 - PyPI
+RUN pip3 install spacy==3.4.0
 
 # Install spacy model sm
 RUN pip3 install https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.4.0/en_core_web_sm-3.4.0.tar.gz --user
