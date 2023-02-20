@@ -1,8 +1,7 @@
-# Software Engineer: RIAAN VAN DEVENTER (SN: RV22110005417)
-# This was programmed for the Software Engineering BOOTCAMP
+# Software Engineer: RIAAN DEVENTER
 # Written on 14 February 2023
 
-# ************** L3T11 - TASK ASSIGNMENT ************** 
+#------------------------------------------------------------------------------------------------
 # ● Find at least 5 garden path sentences from the web or think up your own.
 # ● Store the sentences you have identified or created in a list called gardenpathSentences.
 # ● Tokenise each sentence in the list and perform entity recognition.
@@ -13,7 +12,7 @@
 #   For each entity answer the following questions:
 #       ○ What was the entity and its explanation that you looked up?
 #       ○ Did the entity make sense in terms of the word associated with it?
-#******************************************************
+#------------------------------------------------------------------------------------------------
 
 # ======= Working with spaCy ===== #
 
