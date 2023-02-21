@@ -1,6 +1,6 @@
 # Introduction to Natural Language Processing (NLP)
 
-This program takes 5 sentence and tokenise each sentence and perform entity recognition.
+This program takes 5 sentences and tokenise each sentence and perform entity recognition.
 
 ## Description
 
