@@ -7,7 +7,7 @@ This program takes 5 sentences and tokenise each sentence and perform entity rec
 The program uses spacy to categorise each sentence and then uses spacy.explain to identify the meaning of the entities.
 
 ## Table of Content
-1.  Implementing the website in a virtual environment.
+1.  Implementing the program in a virtual environment.
     - 1.1   Dependencies
     - 1.2   Copying Files
     - 1.3   Run Program
